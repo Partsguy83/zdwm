@@ -1509,6 +1509,7 @@ setfullscreen(Client *c, int fullscreen)
 	}
 }
 
+void 
 setgaps(const Arg *arg)
 {
 	if ((arg->i == 0) || (selmon->gappx + arg->i < 0))
@@ -1518,8 +1519,6 @@ setgaps(const Arg *arg)
 	arrange(selmon);
 }
 
-void
-	
 void
 setlayout(const Arg *arg)
 {
@@ -1719,7 +1718,7 @@ tile(Monitor *m)
 			if (my + HEIGHT(c) + m->gappx < m->wh)
 				my += HEIGHT(c) + m->gappx;
 		} else {
-			+			h = (m->wh - ty) / (n - i) - m->gappx;
+			 h = (m->wh - ty) / (n - i) - m->gappx;
 			resize(c, m->wx + mw + m->gappx, m->wy + ty, m->ww - mw - (2*c->bw) - 2*m->gappx, h - (2*c->bw), 0);
 			if (ty + HEIGHT(c) + m->gappx < m->wh)
 				ty += HEIGHT(c) + m->gappx;
