@@ -66,7 +66,7 @@ static const char *mutecmd[]  = { "amixer", "-q", "set", "Master", "toggle", NUL
 static const char *volumeupcmd[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL };
 static const char *volumedowncmd[] = {"amixer", "-q", "set", "Master", "5%-", "unmute", NULL };
 
-
+#include "exitdwm.c"
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -108,7 +108,7 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	{ MODKEY,                       XK_q,      quit,           {1} },
+	{ MODKEY,                       XK_e,      exitdwm,       {0} },
 };
 
 /* button definitions */
